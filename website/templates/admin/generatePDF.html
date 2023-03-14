@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %} {% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="form-group">
+        <div class="form-group">
+            <h1 align="center">Laporan Masyarakat (Proses)</h1>
+            <label for="tanggal_awal">Tanggal Awal</label>
+            <input class="form-control" type="date" name="tanggal_awal" id="tanggal_awal"><br>
+            <label for="tanggal_akhir">Tanggal Akhir</label>
+            <input class="form-control" type="date" name="tanggal_akhir" id="tanggal_akhir"><br>
+            
+            <input type="submit" class="btn btn-primary" value="Generate PDF">
+        </div>
+        <br>
+    </div>
+</form>
+{% endblock %}

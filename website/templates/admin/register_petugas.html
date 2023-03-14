@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %} {% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h3 align="center">Sign Up Admin/Petugas</h3>
+    <div class="form-group">
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="nama" class="form-control" name="nama" id="nama" placeholder="Masukkan Username">
+            <label for="username">Username</label>
+            <input type="username" class="form-control" name="username" id="username" placeholder="Masukkan Nama Lengkap">
+            <label for="telp">Nomor Telepon</label>
+            <input type="telp" class="form-control" name="telp" id="telp" placeholder="Masukkan Nomor Telepon">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
+            <label for="passwordConf">Konfirmasi Password</label>
+            <input type="passwordConf" class="form-control" name="passwordConf" id="passwordConf" placeholder="Masukkan Konfirmasi Password">    
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+</form>
+{% endblock %}

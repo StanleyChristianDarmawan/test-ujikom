@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %} {% block title %}Login{% endblock %}
+
+{% block content %}
+<form method="post">
+    <h3 align="center">Tanggapi Aduan</h3>
+    <div class="form-group">
+        <label for="aduan">Isi Aduan</label>
+        <input type="text" class="form-control" name="aduan" id="aduan", value="{{ pengaduan_data.isi_laporan_pengaduan }}" disabled>
+        <br>
+        <label for="tanggapan">Tanggapan</label>
+        <input type="textbox" class="form-control" name="tanggapan" id="tanggapan" placeholder="Masukkan Tanggapan">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Kirim</button>
+</form>
+{% endblock %}

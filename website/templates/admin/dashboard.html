@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %} {% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h1 class="text-center mt-5">Laporan Masyarakat (Menunggu Verifikasi)</h1>
+    <ul class="list-group list-group-flush" id="laporan">
+        {% for laporan in data_laporan_0 %}
+        <li class="list-group-item d-flex justify-content-between">
+            {{ laporan.isi_laporan_pengaduan }}
+            <div>
+                <a href="/verifikasi/{{ laporan.id }}" class="btn btn-success">
+                    <span aria-hidden="true">Verifikasi</span>
+                </a>
+                <a href="/delete/{{ laporan.id }}" class="btn btn-warning">
+                    <span aria-hidden="true">Tolak</span>
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</form>
+{% endblock %}

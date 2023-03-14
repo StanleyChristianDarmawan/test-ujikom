@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Laporan</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .table-laporan {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Data Laporan</h1>
+    <table class="table-laporan">
+        <tr>
+            <th>NIK Pelapor</th>
+            <th>Tanggal Aduan</th>
+            <th>Isi Laporan Pengaduan</th>
+            <th>Status</th>
+        </tr>
+        {% for data in data_laporan %}
+        <tr>
+            <td>{{ data.nik }}</td>
+            <td>{{ data.tgl_pengaduan }}</td>
+            <td>{{ data.isi_laporan_pengaduan }}</td>
+            <td>{{ data.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

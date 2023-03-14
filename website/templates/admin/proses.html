@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %} {% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-5">Laporan Masyarakat (Proses)</h1>
+<ul class="list-group list-group-flush" id="laporan">
+    {% for laporan in data_laporan_proses %}
+    <li class="list-group-item d-flex justify-content-between">
+        {{ laporan.isi_laporan_pengaduan }}
+        <div>
+            <a href="/tanggapan/{{ laporan.id }}" class="btn btn-success">
+                <span aria-hidden="true">Tanggapi</span>
+            </a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "admin/base.html" %} {% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Laporan Masyarakat (Selesai)</h1>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tanggal Aduan</th>
+            <th>Isi Laporan Pengaduan</th>
+            <th>Foto</th>
+            <th>Isi Tanggapan</th>
+            <th>Tanggal Tanggapan</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for laporan in data_laporan_selesai %}
+        <tr>
+            <td>{{ laporan.tgl_pengaduan }}</td>
+            <td>{{ laporan.isi_laporan_pengaduan }}</td>
+            <td><img src="../../static/data_foto_laporan/{{ laporan.foto }}" alt="Foto Laporan" width="50" height="50"></td>
+            <td>{{ data_tanggapan[loop.index0].tanggapan }}</td>
+            <td>{{ data_tanggapan[loop.index0].tgl_tanggapan }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <!-- {% for tanggapan in data_tanggapan %} -->
+    <!-- {% endfor %} -->
+</table>
+{% endblock %}
